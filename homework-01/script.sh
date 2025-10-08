@@ -53,7 +53,7 @@ done
 ssh -t ${HADOOP_USER}@team-9-jn "
     set -xe
     if [ ! -f /home/${HADOOP_USER}/.ssh/id_ed25519 ]; then
-        ssh-keygen -t ed25519 -N ''
+        ssh-keygen -t ed25519 -N '' -f /home/${HADOOP_USER}/.ssh/id_ed25519
     fi
 
     ssh-copy-id -i /home/${HADOOP_USER}/.ssh/id_ed25519.pub ${HADOOP_USER}@team-9-nn
