@@ -1,20 +1,19 @@
 <?xml version="1.0"?>
 
 <configuration>
-    <property>
+	<property>
         <name>yarn.application.classpath</name>
         <value>
-            $HADOOP_HOME/etc/,
-            $HADOOP_HOME/etc/hadoop/*,
-            $HADOOP_HOME/lib/*,
-            $HADOOP_HOME/share/hadoop/common/*
-            $HADOOP_HOME/share/hadoop/common/lib/*,
-            $HADOOP_HOME/share/hadoop/hdfs/*,
-            $HADOOP_HOME/share/hadoop/hdfs/lib/*,
-            $HADOOP_HOME/share/hadoop/mapreduce/*,
-            $HADOOP_HOME/share/hadoop/mapreduce/lib/*,
-            $HADOOP HOME/share/hadoop/yarn/*, 
-            $HADOOP_HOME/share/hadoop/yarn/lib/*
+            /home/hadoop/hadoop-3.4.0/etc/*,
+            /home/hadoop/hadoop-3.4.0/etc/hadoop/*,
+            /home/hadoop/hadoop-3.4.0/share/hadoop/common/*,
+            /home/hadoop/hadoop-3.4.0/share/hadoop/common/lib/*,
+            /home/hadoop/hadoop-3.4.0/share/hadoop/hdfs/*,
+            /home/hadoop/hadoop-3.4.0/share/hadoop/hdfs/lib/*,
+            /home/hadoop/hadoop-3.4.0/share/hadoop/mapreduce/*,
+            /home/hadoop/hadoop-3.4.0/share/hadoop/mapreduce/lib/*,
+            /home/hadoop/hadoop-3.4.0/share/hadoop/yarn/*,
+            /home/hadoop/hadoop-3.4.0/share/hadoop/yarn/lib/*
         </value>
     </property>
 
@@ -41,6 +40,6 @@
 
 <property>
     <name>yarn.nodemanager.env-whitelist</name>
-    <value>JAVA_HOME,HADOOP_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_MAPRED_HOME,HADOOP_YARN_HOME,HADOOP_HOME,PATH,LANG,TZ,HADOOP_MAPRED_HOME</value> 
+    <value>JAVA_HOME,HADOOP_HOME,HADOOP_COMMON_HOME,HADOOP_HDFS_HOME,HADOOP_CONF_DIR,CLASSPATH_PREPEND_DISTCACHE,HADOOP_MAPRED_HOME,HADOOP_YARN_HOME,HADOOP_HOME,PATH,LANG,TZ,HADOOP_MAPRED_HOME</value>
 </property>
 </configuration>
