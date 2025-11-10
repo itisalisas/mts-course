@@ -1,0 +1,37 @@
+# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+# exists.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
+
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+#umask 022
+
+export HADOOP_HOME=/home/hadoop/hadoop-3.4.0
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java))))
+export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+
+export HIVE_HOME=/home/hadoop/apache-hive-4.0.0-alpha-2-bin
+export HIVE_CONF_DIR=$HIVE_HOME/conf
+export HIVE_AUX_JARS_PATH=$HIVE_HOME/lib/*
+export PATH=$PATH:$HIVE_HOME/bin
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
